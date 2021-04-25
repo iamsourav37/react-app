@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark  ">
         <div className="container-fluid">
-          <Link
+          <NavLink
             className="navbar-brand text-warning text-uppercase fs-3 font-weight-bold"
             to="/"
           >
             Learning React
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -26,31 +26,53 @@ function NavBar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto fs-4">
               <li className="nav-item ">
-                <Link className="nav-link" aria-current="page" to="/">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link"
+                  aria-current="page"
+                  exact
+                  to="/"
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="About">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link"
+                  to="About"
+                >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/services"
+                >
                   Services
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/portfolio">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/portfolio"
+                >
                   Portfolio
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/contact"
+                >
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

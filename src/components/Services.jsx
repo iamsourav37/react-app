@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Services() {
   return (
@@ -11,19 +11,13 @@ function Services() {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <Link to="/services/design">Website Design</Link>
+              <NavLink exact to="/services/design">
+                Website Design
+              </NavLink>
             </li>
 
             <li className="breadcrumb-item">
-              <Link to="/services/development">Website Development</Link>
-            </li>
-
-            <li className="breadcrumb-item">
-              <Link to="/">Video Editing</Link>
-            </li>
-
-            <li className="breadcrumb-item">
-              <Link to="/">Mobile Apps</Link>
+              <NavLink to="/services/development">Website Development</NavLink>
             </li>
           </ol>
         </nav>
