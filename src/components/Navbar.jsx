@@ -40,7 +40,7 @@ function NavBar() {
                 <NavLink
                   activeClassName="active"
                   className="nav-link"
-                  to="About"
+                  to="/about"
                 >
                   About
                 </NavLink>
@@ -72,6 +72,16 @@ function NavBar() {
                   to="/contact"
                 >
                   Contact
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/todo"
+                >
+                  Todo
                 </NavLink>
               </li>
             </ul>

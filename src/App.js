@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import NoMatch from "./components/NoMatch";
+import Todo from "./components/Todo";
 
 import Design from "./components/ServicesComponents/Design";
 import Development from "./components/ServicesComponents/Development";
@@ -25,9 +26,11 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/services" component={Services} />
-          <Route path="*" component={NoMatch} />
+          <Route path="/todo" component={Todo} />
+          <Route path="*">
+            <NoMatch />
+          </Route>
         </Switch>
-
         <Switch>
           <Route path="/services/design" component={Design} />
           <Route path="/services/development" component={Development} />
