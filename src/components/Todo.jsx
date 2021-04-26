@@ -7,6 +7,10 @@ function Todo() {
 
   const formHandle = (e) => {
     e.preventDefault();
+    if (todoText.trim() === "") {
+      console.log("empty todo");
+      return;
+    }
     setTodos([...todos, todoText]);
     setTodoText("");
   };
