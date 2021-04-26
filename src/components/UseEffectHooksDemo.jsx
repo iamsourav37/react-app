@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function UseEffectHooksDemo() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState("Sourav");
-  const [withCount, setWithCount] = useState(window.screen.width);
+  const [withCount, setWithCount] = useState(window.innerWidth);
 
   useEffect(() => {
     console.log("first useEffect");
@@ -19,6 +19,12 @@ function UseEffectHooksDemo() {
     window.addEventListener("resize", () => {
       setWithCount(window.innerWidth);
     });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setWithCount(window.innerWidth);
+      });
+    };
   });
 
   return (
