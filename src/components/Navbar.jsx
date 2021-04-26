@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import { AiOutlineHome } from "react-icons/ai";
+import { FcTodoList } from "react-icons/fc";
+import { GiHook } from "react-icons/gi";
+
 function NavBar() {
   return (
     <div>
@@ -33,7 +37,7 @@ function NavBar() {
                   exact
                   to="/"
                 >
-                  Home
+                  <AiOutlineHome /> Home
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -81,7 +85,7 @@ function NavBar() {
                   className="nav-link"
                   to="/todo"
                 >
-                  Todo
+                  <FcTodoList /> Todo
                 </NavLink>
               </li>
 
@@ -91,7 +95,7 @@ function NavBar() {
                   className="nav-link"
                   to="/hooks"
                 >
-                  Hooks
+                  <GiHook /> Hooks
                 </NavLink>
               </li>
             </ul>
