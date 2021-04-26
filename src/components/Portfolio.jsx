@@ -5,7 +5,7 @@ function Portfolio() {
     <div>
       <div className="container bg-info text-white">
         <h2>My Portfolio page</h2>
-        <ul class="list-group">
+        <ul className="list-group">
           <li className="list-group-item">An item</li>
           <li className="list-group-item">A second item</li>
           <li className="list-group-item">A third item</li>

@@ -5,7 +5,7 @@ function Contact() {
     <div>
       <div className="container bg-success text-warning m-5">
         <h2>Contact page</h2>
-        <ul class="list-group">
+        <ul className="list-group">
           <li className="list-group-item">An item</li>
           <li className="list-group-item">A second item</li>
           <li className="list-group-item">A third item</li>
