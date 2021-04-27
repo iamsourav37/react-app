@@ -6,6 +6,7 @@ import { FcTodoList } from "react-icons/fc";
 import { GiHook } from "react-icons/gi";
 
 function NavBar() {
+  let iconStyles = { color: "white" };
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark  ">
@@ -37,7 +38,7 @@ function NavBar() {
                   exact
                   to="/"
                 >
-                  <AiOutlineHome /> Home
+                  <AiOutlineHome style={iconStyles} /> Home
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -85,7 +86,7 @@ function NavBar() {
                   className="nav-link"
                   to="/todo"
                 >
-                  <FcTodoList /> Todo
+                  <FcTodoList style={iconStyles} /> Todo
                 </NavLink>
               </li>
 
@@ -95,7 +96,7 @@ function NavBar() {
                   className="nav-link"
                   to="/hooks"
                 >
-                  <GiHook /> Hooks
+                  <GiHook style={iconStyles} /> Hooks
                 </NavLink>
               </li>
             </ul>

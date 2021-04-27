@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function UseEffectHooksDemo() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("Sourav");
+  const [name, setName] = useState("Your name here...");
   const [withCount, setWithCount] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -10,10 +10,6 @@ function UseEffectHooksDemo() {
     if (count !== 0) document.title = `Count (${count})`;
     else document.title = `Count`;
   }, [count]);
-
-  useEffect(() => {
-    console.log("Second useEffect");
-  }, [name]);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -26,6 +22,8 @@ function UseEffectHooksDemo() {
       });
     };
   });
+
+  const nameInput = useRef(null);
 
   return (
     <div className="container text-center mt-5">
@@ -43,18 +41,27 @@ function UseEffectHooksDemo() {
       </button>
 
       <div className="container mt-5">
-        <h1 className="display-5 text-info mb-5 text-uppercase">
-          another useEffect
-        </h1>
-        <h2 className="display-6">{name}</h2>
+        <h1 className="display-5 text-info mb-5 ">useRef hook</h1>
+
+        <input
+          type="text"
+          className="form-controll p-1"
+          placeholder="Enter your name..."
+          ref={nameInput}
+        />
         <button
           onClick={() => {
-            setName("Sourav Ganguly");
+            const name = nameInput.current.value.trim();
+            if (name) {
+              setName(name);
+              nameInput.current.value = "";
+            } else alert("please write your name ");
           }}
           className="btn btn-dark"
         >
           Change Name
         </button>
+        <h2 className="display-6 mt-4">{name}</h2>
       </div>
     </div>
   );
