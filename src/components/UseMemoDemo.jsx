@@ -41,7 +41,7 @@ function UseMemoDemo() {
   );
 }
 const slowFunction = (num) => {
-  for (let index = 0; index < 1000000000; index++) {}
+  for (let index = 0; index < 1000; index++) {}
   return num * 2;
 };
 
