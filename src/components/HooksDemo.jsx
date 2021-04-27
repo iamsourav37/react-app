@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef, useReducer } from "react";
 
+import UseMemoDemo from "./UseMemoDemo";
+
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
     case "Increment":
       state++;
-      if (state >= 10) {
+      if (state === 10) {
         alert("You cross 10 !");
       }
       return state;
@@ -51,6 +53,10 @@ function UseEffectHooksDemo() {
 
   return (
     <div className="container text-center mt-5">
+      <div className="container m-5">
+        <UseMemoDemo />
+      </div>
+
       <h1 className="display-5 text-info mb-5 text-uppercase">
         use effect hook demo. (Current Screen Size : {withCount})
       </h1>

@@ -9,7 +9,7 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import NoMatch from "./components/NoMatch";
 import Todo from "./components/Todo";
-import UseEffectHooksDemo from "./components/UseEffectHooksDemo";
+import HooksDemo from "./components/HooksDemo";
 
 import Design from "./components/ServicesComponents/Design";
 import Development from "./components/ServicesComponents/Development";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/services" component={Services} />
           <Route path="/todo" component={Todo} />
-          <Route path="/hooks" component={UseEffectHooksDemo} />
+          <Route path="/hooks" component={HooksDemo} />
           <Route path="*">
             <NoMatch />
           </Route>
